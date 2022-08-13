@@ -1,0 +1,39 @@
+POST http://localhost:8000/auto_update_api/public/api/login
+content-type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin@gmail.com"
+}
+
+###
+POST http://localhost:8000/auto_update_api/public/api/user-profile
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXV0b191cGRhdGVfYXBpXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2NTQ5MzAwNzksImV4cCI6MTY1NDkzMzY3OSwibmJmIjoxNjU0OTMwMDc5LCJqdGkiOiJkV3NBbzQ1RUVIcUNEbldZIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-b-k6eZS3C9e4SujhWx6Z1iKm32cHdyqV_l7OH67Veo
+
+###
+# source : https://stackoverflow.com/questions/61473990/how-to-post-an-image-with-form-data-in-rest-client-for-vscode
+POST http://localhost:8000/auto_update_api/public/api/upload
+content-type: multipart/form-data; boundary=----WebKitFormBoundary_files
+
+------WebKitFormBoundary_files
+Content-Disposition: form-data; name="photo"; filename="batu.png" 
+Content-Type: image/png
+
+< ./batu.png
+------WebKitFormBoundary_files--
+
+###
+GET http://localhost:8000/siakad_simple/backend/public/api/v1/tutorials
+content-type: application/json
+
+###
+GET http://localhost:8000/siakad_simple/backend/public/api/v2/tutorials
+content-type: application/json
+
+###
+GET http://localhost:8000/siakad_simple/backend/public/api/v1/dosen-matakuliah
+content-type: application/json
+
+###
+GET http://localhost:8000/siakad_simple/backend/public/api/v2/dosen
+content-type: application/json
